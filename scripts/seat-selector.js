@@ -21,6 +21,7 @@ if (
   return;
 }
 
+
 event.target.style.backgroundColor = 'rgb(29, 209, 0)';
 event.target.style.color = "white";
 
@@ -32,11 +33,14 @@ updateSeatsAdded();
 updateTotalCost(priceTckt);
 updateGrandTotal();
 
+// const phNo = document.getElementById('user-phone').value;
+// const convPHno = phNo.length;
+// if (getValueById("seats-added")>0 && convPHno>0 ){
+
+if (getValueById("seats-added")>0){
+    document.getElementById('next-button').removeAttribute('disabled');
+}
 });
-
-
-
-
 }
 
 
