@@ -32,8 +32,6 @@ updateSeatsAdded();
 updateTotalCost(priceTckt);
 updateGrandTotal();
 
-
-
 });
 
 
