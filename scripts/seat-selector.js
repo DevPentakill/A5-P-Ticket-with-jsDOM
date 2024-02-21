@@ -45,7 +45,6 @@ for (const seat of seats) {
     });
 }
 
-
 function createTableRows(num, cata, cost) {
     const newRow = "<tr> <td>" + num + "</td> <td>" + cata + "</td> <td>" + cost + "</td> </tr>";
     return newRow;
@@ -79,9 +78,6 @@ function updateGrandTotal(control) {
     const previousTotal = document.getElementById("total-price").innerText;
     const convertedTotal = parseInt(previousTotal);
     const couponCode = document.getElementById("coupon-code").value;
-
-
-
     if (control) {
         if (couponCode == "Couple 20") {
             const discount = convertedTotal * 0.2;
