@@ -167,19 +167,53 @@
         <!-- coupon code ends here -->
 
         <!-- P.H. Paribahan Section Starts HERE -->
-
         <!-- broader contianer with green radius -->
-        <div class="mt-28 mb-32 border-t-2 border-solid border-pcolor rounded-t-full bg-[#f7f8f8]">
+        <div class="mt-28 mb-32 border-t-2 border-solid border-pcolor rounded-t-3xl bg-[#f7f8f8]">
 
             <!-- ticket model section starts -->
             <section class="w-4/5 max-w-7xl mx-auto">
 
                 <!--heading text -->
                 <h1 class="font-bold text-4xl mt-28 text-center">P.H Paribahan</h1>
-                <p class="text-lg font-medium text-gray-700 text-center mt-6 mb-12">Discover the Journey: Embark on an adventure with our fleet of modern buses, designed to provide comfort and safety throughout your travels. From luxurious amenities to reliable service, experience the essence of seamless transportation with us.</p>
+                <p class="text-lg font-medium text-gray-700 text-center mt-6 mb-12">Discover the Journey: Embark on an
+                    adventure with our fleet of modern buses, designed to provide comfort and safety throughout your
+                    travels. From luxurious amenities to reliable service, experience the essence of seamless
+                    transportation with us.</p>
                 <!-- ticket model-->
-                <div>
-                    
+                <div class="flex bg-white">
+                    <!-- main ticket -->
+                    <div>
+                        <!-- first part of main ticket -->
+                        <div class="flex">
+                            <!-- bus info -->
+                            <div class="flex justify-center items-center">
+                                <img src="./images/bus-logo.png" alt="Logo of our bus">
+                                <div>
+                                    <h3 class="text-3xl font-bold mt-6">Manik Express</h3>
+                                    <p class="text-lg font-medium text-gray-700 mt-6">Coach-009-Rex | AC_Business_Class</p>
+                                </div>
+                            </div>
+
+                            <!-- seat remaining count -->
+                            <div class="flex justify-center items-center gap-2 w-44 h-14 text-xl font-medium text-pcolor bg-pbackcolor border-1 border-pcolor rounded-xl">
+                                <img src="./images/seat-green.png" alt="seat icon button">
+                                <p><span id="seats-left">40</span> seats left</p>
+                            </div>
+                        </div>
+
+                         <!-- Second part of main ticket -->
+                        <div></div>
+                    </div>
+
+                    <!-- divider -->
+                    <div><img src="./images/info-divider.png" alt="ticket divider dotted"></div>
+
+                    <!-- ticket price -->
+                    <div class="flex flex-col justify-center items-center">
+                        <img src="./images/fare.png" alt="">
+                        <h3 class="text-3xl font-bold mt-6">550 BDT</h3>
+                        <p class="text-lg font-medium text-gray-700 mt-6">Per Seat</p>
+                    </div>
                 </div>
 
             </section>
