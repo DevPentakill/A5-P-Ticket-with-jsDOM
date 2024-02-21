@@ -83,12 +83,13 @@ function getValueById(id) {
         const discount = convertedTotal * 0.2;
         document.getElementById("grand-price").innerText =
           convertedTotal - discount;
-        
+          document.getElementById('cupn-div').classList.add('hidden');
 
       }else if(couponCode == "NEW15") {
         const discount = convertedTotal * 0.15;
         document.getElementById("grand-price").innerText =
           convertedTotal - discount;
+          document.getElementById('cupn-div').classList.add('hidden');
       } else {
         alert("Invalid Coupon Code");
         return;
