@@ -181,35 +181,59 @@
                     transportation with us.</p>
                 <!-- ticket model-->
                 <div class="flex bg-white">
+                    <!-- ############################################################# -->
                     <!-- main ticket -->
-                    <div>
+                    <div class="flex-1">
                         <!-- first part of main ticket -->
-                        <div class="flex">
+                        <div class="flex justify-between">
                             <!-- bus info -->
-                            <div class="flex justify-center items-center">
+                            <div class="flex justify-center items-center ml-3">
                                 <img src="./images/bus-logo.png" alt="Logo of our bus">
                                 <div>
                                     <h3 class="text-3xl font-bold mt-6">Manik Express</h3>
-                                    <p class="text-lg font-medium text-gray-700 mt-6">Coach-009-Rex | AC_Business_Class</p>
+                                    <p class="text-lg font-medium text-gray-700 mt-6">Coach-009-Rex | AC_Business_Class
+                                    </p>
                                 </div>
                             </div>
 
                             <!-- seat remaining count -->
-                            <div class="flex justify-center items-center gap-2 w-44 h-14 text-xl font-medium text-pcolor bg-pbackcolor border-1 border-pcolor rounded-xl">
+                            <div
+                                class="flex justify-center items-center gap-2 w-44 h-14 text-xl font-medium text-pcolor bg-pbackcolor border-1 border-pcolor rounded-xl">
                                 <img src="./images/seat-green.png" alt="seat icon button">
                                 <p><span id="seats-left">40</span> seats left</p>
                             </div>
                         </div>
 
-                         <!-- Second part of main ticket -->
-                        <div></div>
+                        <!-- Second part of main ticket -->
+                        <div class="bg-[#f7f8f8] mt-6 ml-8 rounded-md divide-y-2 divide-dashed p-4">
+
+                            <div class="flex mt-3">
+
+                                <p class="flex-1 text-slate-500 text-lg">Route</p>
+                                <p class="flex-initial  text-slate-900 font-semibold text-lg">Dhaka-Sylhet</p>
+                                
+                            </div>
+                          
+                            <div class="flex mt-3 mb-3">
+                                <p class="flex-1  text-slate-500 text-lg">Departure Time</p>
+                                <p class="flex-initial text-slate-900 font-semibold text-lg">21:00</p>
+                                
+                            </div>
+                            
+                            <div class="flex gap-3">
+                                <button class="btn bg-slate-300">Boarding Point-Sayedabad</button>
+                                <button class="btn bg-slate-300">Transit Point- Bogura</button>
+                                <button class="btn bg-slate-300">Est. Time 11hours</button>
+                            </div>
+                        </div>
+
                     </div>
-
+                    <!-- ############################################################# -->
                     <!-- divider -->
-                    <div><img src="./images/info-divider.png" alt="ticket divider dotted"></div>
-
+                    <div class="flex-initial"><img src="./images/info-divider.png" alt="ticket divider dotted"></div>
+                    <!-- ############################################################# -->
                     <!-- ticket price -->
-                    <div class="flex flex-col justify-center items-center">
+                    <div class="flex flex-initial flex-col justify-center items-center mr-3">
                         <img src="./images/fare.png" alt="">
                         <h3 class="text-3xl font-bold mt-6">550 BDT</h3>
                         <p class="text-lg font-medium text-gray-700 mt-6">Per Seat</p>
