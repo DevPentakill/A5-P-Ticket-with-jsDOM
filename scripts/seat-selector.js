@@ -1,27 +1,20 @@
+
+//Setting some common constants
+//these are unchangeable
 const category = "Economy";
 const priceTckt = 550;
 const seats = document.getElementsByClassName("bus-seat");
-// console.log(seats);
-//it shows me html collection
 
 // First event listener which will trigger after clicking the SEATS
 for (const seat of seats) {
     seat.addEventListener("click", function (event) {
-        // console.log(event.target);
-        // it shows me the whole tag of button i pressed
         const seatNum = event.target.textContent;
-        // console.log(typeof seatNum);
-        //give me the seat number as a string
-
         event.target.setAttribute("disabled", false);
-
         if (
             getValueById("seats-added") >= 4) {
             alert("You have reached seat booking Limit");
             return;
         }
-
-
         event.target.style.backgroundColor = 'rgb(29, 209, 0)';
         event.target.style.color = "white";
 
@@ -43,17 +36,14 @@ for (const seat of seats) {
             document.getElementById('coupon-code').removeAttribute('disabled');
             document.getElementById('apply-cupn').removeAttribute('disabled');
         }
-
-
     });
 }
 
+
 //2nd eventlistener whcih will trigger only if passenger type in phone number input field
-
 const passengerTel = document.getElementById("user-phone");
-// console.log(passengerTel);
-passengerTel.addEventListener('keyup', function (elem) {
 
+passengerTel.addEventListener('keyup', function (elem) {
     // console.log(elem.target.value);
     let acheNaki = elem.target.value.length;
 
