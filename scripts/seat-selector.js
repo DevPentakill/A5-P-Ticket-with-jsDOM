@@ -3,6 +3,8 @@ const priceTckt = 550;
 const seats = document.getElementsByClassName("bus-seat");
 // console.log(seats);
 //it shows me html collection
+
+// First event listener which will trigger after clicking the SEATS
 for (const seat of seats) {
     seat.addEventListener("click", function (event) {
         // console.log(event.target);
@@ -10,9 +12,6 @@ for (const seat of seats) {
         const seatNum = event.target.textContent;
         // console.log(typeof seatNum);
         //give me the seat number as a string
-
-
-
         event.target.setAttribute("disabled", false);
 
         if (
@@ -33,18 +32,60 @@ for (const seat of seats) {
         updateTotalCost(priceTckt);
         updateGrandTotal();
 
-        // const phNo = document.getElementById('user-phone').value;
-        // const convPHno = phNo.length;
-        // if (getValueById("seats-added")>0 && convPHno>0 ){
+        //Checking If I can Enable the Phone number Input section for Passenger
+        if (getValueById("seats-added")>0) {
+            document.getElementById('user-phone').removeAttribute('disabled');
+        }
+        //Checking If I can enable the Coupon apply Button
         if (getValueById("seats-added") == 4) {
             document.getElementById('apply-cupn').removeAttribute('disabled');
         }
-        if (getValueById("seats-added") > 0) {
-            document.getElementById('next-button').removeAttribute('disabled');
-        }
+
+
     });
 }
 
+//2nd eventlistener whcih will trigger only if passenger type in phone number input field
+
+const passengerTel = document.getElementById("user-phone");
+// console.log(passengerTel);
+passengerTel.addEventListener('keyup', function (elem) {
+
+    // console.log(elem.target.value);
+    let acheNaki = elem.target.value.length;
+
+    if (getValueById("seats-added") > 0 && acheNaki > 0) {
+        document.getElementById('next-button').removeAttribute('disabled');
+    } else {
+        alert('Please input Numeric Value');
+        // return;
+    }
+
+})
+
+// alert('Please input Numeric Value');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Magical Functions to help me
 function createTableRows(num, cata, cost) {
     const newRow = "<tr> <td>" + num + "</td> <td>" + cata + "</td> <td>" + cost + "</td> </tr>";
     return newRow;

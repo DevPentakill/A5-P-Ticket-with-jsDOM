@@ -381,17 +381,18 @@
                         <form class="mb-3">
                             <h3 class="font-semibold">Passenger Name*</h3>
                             <br>
-                            <input type="text" name="" id="" placeholder="Enter your name">
+                            <input type="text" class ="w-1/2 bg-lime-200" placeholder="Enter your name" required>
                             <br>
                             <br>
                             <h3 class="font-semibold">Phone Number*</h3>
                             <br>
-                            <input type="tel" name="" id="user-phone" placeholder="Enter your phone number">
+                            <!-- <input type="text" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" /> -->
+                            <input type="text" id="user-phone" class ="w-1/2 bg-lime-200 disabled:bg-red-400 disabled:placeholder:text-white" placeholder="Enter your phone number" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" required disabled>
                             <br>
                             <br>
                             <h3 class="font-semibold">Email ID</h3>
                             <br>
-                            <input type="text" name="" id="" placeholder="Enter your Email ID">
+                            <input type="text" class ="w-1/2 bg-lime-200" placeholder="Enter your Email ID">
                             <br>
                             <br>
                             <!-- modal starts here -->
@@ -404,13 +405,13 @@
                                     <p class="py-4">We are working hard to find the best service and deals for you.
                                         Shortly you will find a confirmation in your email.</p>
                                     <div class="modal-action">
-                                        <a href="#" class="btn">Close</a>
+                                        <a href="" class="btn">Close</a>
                                     </div>
                                 </div>
                             </div>
                             <!-- modal ends here -->
                         </form>
-                        
+
                         <a class="link">Terms and conditions</a>
                         <a class="link">Cancellation Policy</a>
                     </div>
