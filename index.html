@@ -252,9 +252,9 @@
                 <!-- SEAT PLANNER interface -->
                 <div class="flex-1 divide-y-2 divide-dashed">
                     <!-- title -->
-                    <h2 class="text-2xl font-semibold my-8">Select Your Seat</h2>
+                    <h2 class="text-2xl font-semibold my-8 ml-3">Select Your Seat</h2>
                     <!-- seat icon LEGENDS -->
-                    <div class="flex justify-between items-center">
+                    <div class="flex justify-between items-center p-3">
                         <div class="flex gap-2 my-5">
                             <img src="./images/seat-gray.png" alt="avaialbale seat">
                             <p class="font-bold text-slate-400">Available</p>
@@ -266,11 +266,11 @@
                     </div>
                     <!-- Seat Planning map -->
                     <div>
-                        <div class="flex justify-end my-2">
-                            <button class="btn"><img class="w-10 h-10" src="./images/icons8-steering-68.png"
+                        <div class="flex justify-end my-4 mr-16">
+                            <button class="btn" disabled><img class="w-10 h-10" src="./images/icons8-steering-68.png"
                                     alt=""></button>
                         </div>
-                        <div class="flex justify-around">
+                        <div class="flex justify-evenly pb-4">
                             <!-- 1st column -->
                             <div class="grid grid-cols-3 justify-evenly items-center gap-4">
                                 <h4>A</h4>
@@ -335,11 +335,11 @@
                 </div>
 
                 <!-- SEAT LIST and PASSENGER form -->
-                <div class="flex-1 divide-y-2 divide-dashed">
+                <div class="flex-1 divide-y-2 divide-dashed p-5">
                     <h2 class="text-2xl font-semibold">Select Your Seat</h2>
 
                     <!-- seat list, total and coupon calculation starts here -->
-                    <div class="overflow-x-auto bg-[#f7f8f8] my-6">
+                    <div class="overflow-x-auto bg-[#f7f8f8] my-6 rounded-lg">
                         <!-- wrting table code -->
                         <table class="table">
                             <!-- head -->
@@ -351,7 +351,7 @@
                                     <th>Price</th>
                                 </tr>
                             </thead>
-                            <tbody id="selected-seat-list">
+                            <tbody id="selected-seat-list" class="h-44">
                                 <!-- This is an empty vessel for new records -->
                             </tbody>
                         </table>
@@ -365,7 +365,7 @@
                         <!-- apply coupn -->
                         <div id="cupn-div" class="text-center">
                             <input type="text" id="coupon-code"
-                                class=" disabled:bg-red-400 disabled:placeholder:text-white"
+                                class=" h-11 p-3 rounded-lg border-2 border-pink-400 disabled:bg-red-400 disabled:placeholder:text-white"
                                 placeholder="Have any coupon?" disabled>
                             <button disabled onclick="updateGrandTotal('darius')" class="btn bg-pcolor text-white"
                                 id="apply-cupn">Apply</button>
@@ -382,29 +382,41 @@
                     <!-- passenger information form -->
                     <div class="ml-8">
                         <form class="mb-3">
-                            <h3 class="font-semibold">Passenger Name*</h3>
+                            <h3 class="font-bold">Passenger Name*</h3>
                             <br>
-                            <input type="text" class="w-1/2 bg-lime-200" placeholder="Enter your name" required />
+                            <input type="text" class="w-4/5 h-11 p-3 rounded-lg border-2 border-slate-400 bg-lime-200"
+                                placeholder="Enter your name" required />
                             <br>
                             <br>
-                            <h3 class="font-semibold">Phone Number*</h3>
+                            <h3 class="font-bold">Phone Number*</h3>
                             <br>
                             <!-- <input type="text" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" /> -->
                             <input type="text" id="user-phone"
-                                class="w-1/2 bg-lime-200 disabled:bg-red-400 disabled:placeholder:text-white"
+                                class="w-4/5 h-11 p-3 rounded-lg border-2 border-slate-400 bg-lime-200 disabled:bg-red-400 disabled:placeholder:text-white"
                                 placeholder="Enter your phone number"
                                 onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
                                 required disabled />
                             <br>
                             <br>
-                            <h3 class="font-semibold">Email ID</h3>
+                            <h3 class="font-bold">Email ID</h3>
                             <br>
-                            <input type="text" class="w-1/2 bg-lime-200" placeholder="Enter your Email ID" />
+                            <input type="text" class="w-4/5 bg-lime-200 h-11 p-3 rounded-lg border-2 border-slate-400"
+                                placeholder="Enter your Email ID" />
                             <br>
                             <br>
+                            <!-- Next button with Modal functionality -->
+                            <div class="flex flex-col justify-center">
+                                <div class="justify-center mb-5">
+                                    <a id="next-button" href="#my_modal_8" class="btn w-4/5 bg-pcolor text-white"
+                                        disabled>Next</a>
+                                </div>
+                                <div class="flex justify-between">
+
+                                    <a class="link flex-1 items-start">Terms and conditions</a>
+                                    <a class="link flex-1 item-end">Cancellation Policy</a>
+                                </div>
+                            </div>
                             <!-- modal starts here -->
-                            <a id="next-button" href="#my_modal_8" class="btn btn-wide bg-pcolor text-white"
-                                disabled>Next</a>
                             <div class="modal" role="dialog" id="my_modal_8">
                                 <div class="modal-box flex flex-col justify-center items-center">
                                     <img src="./images/success.png" alt="modal image" class="mb-5">
@@ -419,8 +431,7 @@
                             </div>
                             <!-- modal ends here -->
                         </form>
-                        <a class="link">Terms and conditions</a>
-                        <a class="link">Cancellation Policy</a>
+
                     </div>
                 </div>
 
