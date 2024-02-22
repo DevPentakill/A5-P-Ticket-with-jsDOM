@@ -364,7 +364,9 @@
                         </div>
                         <!-- apply coupn -->
                         <div id="cupn-div" class="text-center">
-                            <input type="text" id="coupon-code" class=" disabled:bg-red-400 disabled:placeholder:text-white" placeholder="Have any coupon?" disabled>
+                            <input type="text" id="coupon-code"
+                                class=" disabled:bg-red-400 disabled:placeholder:text-white"
+                                placeholder="Have any coupon?" disabled>
                             <button disabled onclick="updateGrandTotal('darius')" class="btn bg-pcolor text-white"
                                 id="apply-cupn">Apply</button>
                         </div>
@@ -382,18 +384,22 @@
                         <form class="mb-3">
                             <h3 class="font-semibold">Passenger Name*</h3>
                             <br>
-                            <input type="text" class ="w-1/2 bg-lime-200" placeholder="Enter your name" required />
+                            <input type="text" class="w-1/2 bg-lime-200" placeholder="Enter your name" required />
                             <br>
                             <br>
                             <h3 class="font-semibold">Phone Number*</h3>
                             <br>
                             <!-- <input type="text" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" /> -->
-                            <input type="text" id="user-phone" class ="w-1/2 bg-lime-200 disabled:bg-red-400 disabled:placeholder:text-white" placeholder="Enter your phone number" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" required disabled />
+                            <input type="text" id="user-phone"
+                                class="w-1/2 bg-lime-200 disabled:bg-red-400 disabled:placeholder:text-white"
+                                placeholder="Enter your phone number"
+                                onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
+                                required disabled />
                             <br>
                             <br>
                             <h3 class="font-semibold">Email ID</h3>
                             <br>
-                            <input type="text" class ="w-1/2 bg-lime-200" placeholder="Enter your Email ID" />
+                            <input type="text" class="w-1/2 bg-lime-200" placeholder="Enter your Email ID" />
                             <br>
                             <br>
                             <!-- modal starts here -->
@@ -402,7 +408,7 @@
                             <div class="modal" role="dialog" id="my_modal_8">
                                 <div class="modal-box flex flex-col justify-center items-center">
                                     <img src="./images/success.png" alt="modal image" class="mb-5">
-                                    <h2  class="font-black text-xl text-emerald-500">SUCCESS</h2>
+                                    <h2 class="font-black text-xl text-emerald-500">SUCCESS</h2>
                                     <h3 class="font-bold text-lg mt-4">Thank you for Booking Our Bus Seats!</h3>
                                     <p class="py-4">We are working hard to find the best service and deals for you.
                                         Shortly you will find a confirmation in your email.</p>
@@ -431,24 +437,39 @@
 
 
     <!-- footer section starts here -->
-    <footer class="footer p-10 bg-neutral text-neutral-content">
 
+    <footer class="footer p-10 bg-neutral text-neutral-content">
         <section class="w-4/5 max-w-7xl mx-auto flex justify-between">
             <aside>
-                <p><a class="btn btn-ghost text-4xl font-black hover:bg-pcolor">P-Ticket</a><br>Providing reliable
+                <p class="text-slate-400 text-xl"><span
+                        class="text-4xl font-black text-white">P-Ticket</span><br>Providing reliable
                     Tickets
                     since 2021</p>
             </aside>
             <nav>
-                <h6 class="footer-title">Download Our App from PlayStore</h6>
+                <h6 class="footer-title text-xl text-white">Download Our App</h6>
                 <div class="grid grid-flow-col gap-4">
                     <a><img src="./images/playstore.png" alt="playtore logo"></a>
-
+                    <p class="text-base font-medium">Get it on <br> Google Playstore</p>
                 </div>
             </nav>
         </section>
     </footer>
+    <!-- <hr class="w-4/5 border-1 border-dotted border-red-400"> -->
+    <div class="footer p-10 bg-neutral text-neutral-content">
+        <section class="w-4/5 max-w-7xl mx-auto flex justify-between">
+            <div>
+                <p class=" font-medium"> &copy; All Rights Reserved, P-Tickets Service Limited 2024 </p>
+            </div>
+            <div class="flex gap-3">
+                <a class="link text-amber-400 font-medium no-underline">Terms and conditions</a>
+                <a class="link  text-amber-400 font-medium no-underline">Return and Refund Policy</a>
+                <a class="link  text-amber-400 font-medium no-underline">Privacy Policy</a>
+            </div>
+        </section>
+    </div>
     <!-- footer section ends here -->
+
     <script src="./scripts/seat-selector.js"></script>
 </body>
 
