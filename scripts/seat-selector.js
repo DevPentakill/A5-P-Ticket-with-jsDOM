@@ -12,6 +12,7 @@ for (const seat of seats) {
         const seatNum = event.target.textContent;
         // console.log(typeof seatNum);
         //give me the seat number as a string
+
         event.target.setAttribute("disabled", false);
 
         if (
@@ -67,23 +68,6 @@ passengerTel.addEventListener('keyup', function (elem) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Magical Functions to help me
 function createTableRows(num, cata, cost) {
     const newRow = "<tr> <td>" + num + "</td> <td>" + cata + "</td> <td>" + cost + "</td> </tr>";
@@ -114,24 +98,35 @@ function updateTotalCost(price) {
     document.getElementById("total-price").innerText = convertedTotal + convertedPrice;
 }
 
-function updateGrandTotal(control) {
+function updateGrandTotal(elem) {
     const previousTotal = document.getElementById("total-price").innerText;
     const convertedTotal = parseInt(previousTotal);
     const couponCode = document.getElementById("coupon-code").value;
-    if (control) {
+   
+
+    if (elem) {
         if (couponCode == "Couple 20") {
             const discount = convertedTotal * 0.2;
-            document.getElementById("grand-price").innerText =
-                convertedTotal - discount;
+            document.getElementById("grand-price").innerText = convertedTotal - discount;
             document.getElementById('cupn-div').classList.add('hidden');
+
+            //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            const discountInfo = "Congratulations, Mate! You've just earned a " + discount + " BDT discount <3";
+            const discountDiv = document.createElement('p');
+            discountDiv.innerText = discountInfo;
+            document.getElementById('disco-info').appendChild(discountDiv); 
 
         } else if (couponCode == "NEW15") {
             const discount = convertedTotal * 0.15;
-            document.getElementById("grand-price").innerText =
-                convertedTotal - discount;
+            document.getElementById("grand-price").innerText = convertedTotal - discount;
             document.getElementById('cupn-div').classList.add('hidden');
+            //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            const discountInfo = "Congratulations, Mate! You've just earned a " + discount + " BDT discount <3";
+            const discountDiv = document.createElement('p');
+            discountDiv.innerText = discountInfo;
+            document.getElementById('disco-info').appendChild(discountDiv);
         } else {
-            alert("Invalid Coupon Code");
+            alert("Invalid Coupon Code Mate!");
             return;
         }
     } else {
