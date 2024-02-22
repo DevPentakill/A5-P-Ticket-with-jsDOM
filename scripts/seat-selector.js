@@ -36,8 +36,10 @@ for (const seat of seats) {
         if (getValueById("seats-added")>0) {
             document.getElementById('user-phone').removeAttribute('disabled');
         }
-        //Checking If I can enable the Coupon apply Button
+        //Checking If I can enable the Coupon apply INPUT+Button
         if (getValueById("seats-added") == 4) {
+
+            document.getElementById('coupon-code').removeAttribute('disabled');
             document.getElementById('apply-cupn').removeAttribute('disabled');
         }
 
@@ -58,12 +60,9 @@ passengerTel.addEventListener('keyup', function (elem) {
         document.getElementById('next-button').removeAttribute('disabled');
     } else {
         alert('Please input Numeric Value');
-        // return;
     }
 
 })
-
-// alert('Please input Numeric Value');
 
 
 
